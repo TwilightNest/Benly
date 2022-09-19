@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED68CD5C28D4A70C00BDEAB1 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68CD5B28D4A70C00BDEAB1 /* AlertHelper.swift */; };
 		EDA425B228CB6FF700F05925 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA425B128CB6FF700F05925 /* MapKit.framework */; };
 		EDA425B428CB75A000F05925 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA425B328CB75A000F05925 /* MapController.swift */; };
 		EDC1590F28CA370700C845E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1590E28CA370700C845E5 /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED68CD5B28D4A70C00BDEAB1 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		EDA425B128CB6FF700F05925 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EDA425B328CB75A000F05925 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		EDC1590B28CA370700C845E5 /* Benly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Benly.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED68CD5A28D4A6F300BDEAB1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ED68CD5B28D4A70C00BDEAB1 /* AlertHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		EDA425B028CB6FF700F05925 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		EDC1590D28CA370700C845E5 /* Benly */ = {
 			isa = PBXGroup;
 			children = (
+				ED68CD5A28D4A6F300BDEAB1 /* Helpers */,
 				EDA425B528CB75FC00F05925 /* controllers */,
 				EDC1590E28CA370700C845E5 /* AppDelegate.swift */,
 				EDC1591028CA370700C845E5 /* SceneDelegate.swift */,
@@ -164,6 +175,7 @@
 				EDA425B428CB75A000F05925 /* MapController.swift in Sources */,
 				EDC1591928CA370700C845E5 /* Benly.xcdatamodeld in Sources */,
 				EDC1590F28CA370700C845E5 /* AppDelegate.swift in Sources */,
+				ED68CD5C28D4A70C00BDEAB1 /* AlertHelper.swift in Sources */,
 				EDC1591128CA370700C845E5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +326,8 @@
 				DEVELOPMENT_TEAM = FXTRN44ZC4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Benly/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app needs full access to your location. You can choose \"When in use\" but the application will not work correctly.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs full access to your location. You can choose \"When in use\" but the application will not work correctly.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -343,6 +357,8 @@
 				DEVELOPMENT_TEAM = FXTRN44ZC4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Benly/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app needs full access to your location. You can choose \"When in use\" but the application will not work correctly.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs full access to your location. You can choose \"When in use\" but the application will not work correctly.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

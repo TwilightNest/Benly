@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>This app requres you location</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -15,6 +13,12 @@
 			</array>
 		</dict>
 	</array>
+	<key>Location Is Newer Description</key>
+	<string>This app needs full access to your location. Go to "Settings" and set "Location" to "Always".</string>
+	<key>Location Is Off Description</key>
+	<string>This app needs full access to your location. You can choose "When in use" but the application will not work correctly.</string>
+	<key>Location Is While Using App Description</key>
+	<string>This app needs full access to your location. Go to "Settings" and set "Location" to "Always".</string>
 	<key>MKDirectionsApplicationSupportedModes</key>
 	<array>
 		<string>MKDirectionsModeBike</string>
@@ -49,5 +53,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 </dict>
 </plist>
