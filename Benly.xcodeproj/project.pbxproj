@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED68CD5C28D4A70C00BDEAB1 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68CD5B28D4A70C00BDEAB1 /* AlertHelper.swift */; };
+		ED1421EE28D8BE6400696138 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = ED1421ED28D8BE6400696138 /* MapboxMaps */; };
+		ED44D28D28DDE2AA0083EB22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED44D28C28DDE2AA0083EB22 /* User.swift */; };
+		ED7D8C5E28E71A2100C65157 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED7D8C5D28E71A2100C65157 /* Registration.storyboard */; };
+		ED7F4E5928D9BB8600E2EA36 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F4E5828D9BB8600E2EA36 /* RegistrationController.swift */; };
 		EDA425B228CB6FF700F05925 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA425B128CB6FF700F05925 /* MapKit.framework */; };
 		EDA425B428CB75A000F05925 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA425B328CB75A000F05925 /* MapController.swift */; };
 		EDC1590F28CA370700C845E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC1590E28CA370700C845E5 /* AppDelegate.swift */; };
@@ -19,7 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ED68CD5B28D4A70C00BDEAB1 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		ED44D28C28DDE2AA0083EB22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ED7D8C5D28E71A2100C65157 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		ED7F4E5828D9BB8600E2EA36 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		EDA425B128CB6FF700F05925 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EDA425B328CB75A000F05925 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		EDC1590B28CA370700C845E5 /* Benly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Benly.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1421EE28D8BE6400696138 /* MapboxMaps in Frameworks */,
 				EDA425B228CB6FF700F05925 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,12 +50,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ED68CD5A28D4A6F300BDEAB1 /* Helpers */ = {
+		ED68CD5A28D4A6F300BDEAB1 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
-				ED68CD5B28D4A70C00BDEAB1 /* AlertHelper.swift */,
 			);
-			path = Helpers;
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		ED7F4E5328D9B5B000E2EA36 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				ED44D28C28DDE2AA0083EB22 /* User.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		EDA425B028CB6FF700F05925 /* Frameworks */ = {
@@ -64,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				EDA425B328CB75A000F05925 /* MapController.swift */,
+				ED7F4E5828D9BB8600E2EA36 /* RegistrationController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -88,7 +102,8 @@
 		EDC1590D28CA370700C845E5 /* Benly */ = {
 			isa = PBXGroup;
 			children = (
-				ED68CD5A28D4A6F300BDEAB1 /* Helpers */,
+				ED7F4E5328D9B5B000E2EA36 /* models */,
+				ED68CD5A28D4A6F300BDEAB1 /* helpers */,
 				EDA425B528CB75FC00F05925 /* controllers */,
 				EDC1590E28CA370700C845E5 /* AppDelegate.swift */,
 				EDC1591028CA370700C845E5 /* SceneDelegate.swift */,
@@ -97,6 +112,7 @@
 				EDC1591C28CA370C00C845E5 /* LaunchScreen.storyboard */,
 				EDC1591F28CA370C00C845E5 /* Info.plist */,
 				EDC1591728CA370700C845E5 /* Benly.xcdatamodeld */,
+				ED7D8C5D28E71A2100C65157 /* Registration.storyboard */,
 			);
 			path = Benly;
 			sourceTree = "<group>";
@@ -117,6 +133,9 @@
 			dependencies = (
 			);
 			name = Benly;
+			packageProductDependencies = (
+				ED1421ED28D8BE6400696138 /* MapboxMaps */,
+			);
 			productName = Benly;
 			productReference = EDC1590B28CA370700C845E5 /* Benly.app */;
 			productType = "com.apple.product-type.application";
@@ -145,6 +164,9 @@
 				Base,
 			);
 			mainGroup = EDC1590228CA370700C845E5;
+			packageReferences = (
+				ED1421EC28D8BE6400696138 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+			);
 			productRefGroup = EDC1590C28CA370700C845E5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -160,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC1591E28CA370C00C845E5 /* LaunchScreen.storyboard in Resources */,
+				ED7D8C5E28E71A2100C65157 /* Registration.storyboard in Resources */,
 				EDC1591B28CA370C00C845E5 /* Assets.xcassets in Resources */,
 				EDC1591628CA370700C845E5 /* Main.storyboard in Resources */,
 			);
@@ -174,9 +197,10 @@
 			files = (
 				EDA425B428CB75A000F05925 /* MapController.swift in Sources */,
 				EDC1591928CA370700C845E5 /* Benly.xcdatamodeld in Sources */,
+				ED44D28D28DDE2AA0083EB22 /* User.swift in Sources */,
 				EDC1590F28CA370700C845E5 /* AppDelegate.swift in Sources */,
-				ED68CD5C28D4A70C00BDEAB1 /* AlertHelper.swift in Sources */,
 				EDC1591128CA370700C845E5 /* SceneDelegate.swift in Sources */,
+				ED7F4E5928D9BB8600E2EA36 /* RegistrationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +424,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED1421EC28D8BE6400696138 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED1421ED28D8BE6400696138 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED1421EC28D8BE6400696138 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		EDC1591728CA370700C845E5 /* Benly.xcdatamodeld */ = {

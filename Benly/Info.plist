@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>MBXAccessToken</key>
+	<string>pk.eyJ1IjoidHdpbGlnaHRuZXN0IiwiYSI6ImNsODh1dXQwZDAwdmQzd2s2ZzI1eDQ3ODYifQ.k5jtq7rvOHNb2Hp2vJZ4yw</string>
+	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
+	<dict>
+		<key>LocationAccuracyAuthorizationDescription</key>
+		<string>Please enable precise location. Turn-by-turn directions only work when precise location data is available.</string>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs full access to your location. Go to &quot;Settings&quot; and set &quot;Location&quot; to &quot;Always&quot;.</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -13,12 +22,6 @@
 			</array>
 		</dict>
 	</array>
-	<key>Location Is Newer Description</key>
-	<string>This app needs full access to your location. Go to "Settings" and set "Location" to "Always".</string>
-	<key>Location Is Off Description</key>
-	<string>This app needs full access to your location. You can choose "When in use" but the application will not work correctly.</string>
-	<key>Location Is While Using App Description</key>
-	<string>This app needs full access to your location. Go to "Settings" and set "Location" to "Always".</string>
 	<key>MKDirectionsApplicationSupportedModes</key>
 	<array>
 		<string>MKDirectionsModeBike</string>

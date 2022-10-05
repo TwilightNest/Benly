@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
-        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="JR3-gy-hhM">
             <objects>
-                <tabBarController id="bwg-cK-RY1" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MapController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bwg-cK-RY1" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wje-kd-xEr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -32,15 +31,19 @@
         <!--Map-->
         <scene sceneID="xDK-S2-6dE">
             <objects>
-                <viewController storyboardIdentifier="MapController" title="Map" id="xeh-GU-UfL" customClass="MapController" customModule="Benly" customModuleProvider="target" sceneMemberID="viewController">
-                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="970-dI-8S0">
+                <viewController title="Map" id="xeh-GU-UfL" customClass="MapController" customModule="Benly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a0A-F8-EPR" userLabel="Map View" customClass="MapView" customModule="MapboxMaps">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <standardMapConfiguration key="preferredConfiguration"/>
-                    </mapView>
+                        <viewLayoutGuide key="safeArea" id="Jhx-pV-EFR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="styleURI__" value="mapbox://styles/twilightnest/cl88v4g18004q15p1f2yw3nr0"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                     <tabBarItem key="tabBarItem" title="Map" id="GvR-we-aIQ"/>
                     <connections>
-                        <outlet property="mapView" destination="970-dI-8S0" id="0vs-S7-wzP"/>
+                        <outlet property="mapView" destination="a0A-F8-EPR" id="ntt-Zb-dWz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ru3-nG-frz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
