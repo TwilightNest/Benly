@@ -166,6 +166,7 @@
 			mainGroup = EDC1590228CA370700C845E5;
 			packageReferences = (
 				ED1421EC28D8BE6400696138 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+				ED05B95B28EF0C55002D579B /* XCRemoteSwiftPackageReference "BCryptSwift" */,
 			);
 			productRefGroup = EDC1590C28CA370700C845E5 /* Products */;
 			projectDirPath = "";
@@ -412,7 +413,7 @@
 				EDC1592128CA370C00C845E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		EDC1592228CA370C00C845E5 /* Build configuration list for PBXNativeTarget "Benly" */ = {
 			isa = XCConfigurationList;
@@ -421,11 +422,19 @@
 				EDC1592428CA370C00C845E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		ED05B95B28EF0C55002D579B /* XCRemoteSwiftPackageReference "BCryptSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/felipeflorencio/BCryptSwift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		ED1421EC28D8BE6400696138 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
