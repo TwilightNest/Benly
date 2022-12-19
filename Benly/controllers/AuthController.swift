@@ -1,14 +1,15 @@
 import UIKit
 
-class RegistrationController: UIViewController {
-    
-    @IBOutlet var mainView: UIView!
-    
-    @IBAction func registerUserButton(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mapViewController = storyboard.instantiateViewController(withIdentifier: "MapController")
-        view.window?.rootViewController = mapViewController
+class AuthController: UIViewController {
+
+    @IBAction func loginButtonClick() {
+        view.window?.rootViewController = StoryboardSwitcher.switchStoryboard(sbName: "Main", controllerName: "Main")
     }
+    
+    @IBAction func registerButtonClick() {
+        view.window?.rootViewController = StoryboardSwitcher.switchStoryboard(sbName: "Register", controllerName: "Register")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

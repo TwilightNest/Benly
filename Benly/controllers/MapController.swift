@@ -10,11 +10,6 @@ class MapController: UIViewController, LocationPermissionsDelegate {
         super.viewDidLoad()
         mapView.location.delegate = self
         
-        //let initCameraOptions = CameraOptions(center: CLLocationCoordinate2D(latitude: 53.8946, longitude: 27.5606))
-        
-        //let mapInitIptions = MapInitOptions(cameraOptions: initCameraOptions)
-        //mapView = MapView(frame: view.bounds, mapInitOptions: mapInitIptions)
-        
         mapView.location.options.puckType = .puck2D()
     }
     

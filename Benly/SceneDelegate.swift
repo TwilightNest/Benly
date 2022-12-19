@@ -53,15 +53,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     private func configureInitialViewController() {
+        //проверяем есть ли авторизованый пользователь
         if let data = UserDefaults.standard.data(forKey: "CurrentUser"){
             let currentUser = try! JSONDecoder().decode(User.self, from: data)
-            currentUser.Id;
-        } else {
-            let storyboard = UIStoryboard(name: "Registration", bundle: nil)
-            
-            let registrationViewController = storyboard.instantiateViewController(withIdentifier: "RegistrationController")
-            
-            window?.rootViewController = registrationViewController
+            currentUser.Login;
+        } else { // если нет то идём на страницу авторизации
+            window?.rootViewController = StoryboardSwitcher.switchStoryboard(sbName: "Auth", controllerName: "Auth")
         }
     }
     

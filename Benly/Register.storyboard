@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
         <!--Login-->
         <scene sceneID="QdU-Mw-G89">
             <objects>
-                <viewController storyboardIdentifier="RegistrationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fyV-bn-dK6" userLabel="Login" customClass="RegistrationController" customModule="Benly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Register" id="fyV-bn-dK6" userLabel="Login" customClass="RegisterController" customModule="Benly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="geq-1s-HDT" userLabel="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@ Come up with a login
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="nickname"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVC-L9-cCP" userLabel="EnterButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVC-L9-cCP" userLabel="NextButton">
                                         <rect key="frame" x="177.66666666666666" y="167.33333333333331" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="MN8-Ou-0AO"/>
@@ -51,7 +51,7 @@ Come up with a login
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
                                         <connections>
-                                            <segue destination="jq6-dV-e6G" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Ksl-tN-VOg"/>
+                                            <segue destination="jq6-dV-e6G" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Xv1-fW-cGF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -77,6 +77,7 @@ Come up with a login
                     </view>
                     <navigationItem key="navigationItem" id="4KB-Wk-zS5"/>
                     <connections>
+                        <outlet property="loginTextField" destination="MtR-Oy-Sdd" id="Ugc-Fm-5gX"/>
                         <outlet property="mainView" destination="geq-1s-HDT" id="RBZ-h0-iQD"/>
                         <outlet property="view" destination="geq-1s-HDT" id="2PZ-6L-ztO"/>
                     </connections>
@@ -88,7 +89,7 @@ Come up with a login
         <!--Email-->
         <scene sceneID="A4h-Mo-Gfu">
             <objects>
-                <viewController storyboardIdentifier="Email" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jq6-dV-e6G" userLabel="Email" customClass="RegistrationController" customModule="Benly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Email" id="jq6-dV-e6G" userLabel="Email" customClass="RegisterController" customModule="Benly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bJa-nw-MHf" userLabel="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +119,7 @@ will be sent to it</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="nickname"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQc-n4-JMg" userLabel="EnterButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQc-n4-JMg" userLabel="NextButton">
                                         <rect key="frame" x="207.66666666666666" y="167.33333333333331" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="8A3-QX-tRG"/>
@@ -167,6 +168,7 @@ will be sent to it</string>
                     </view>
                     <navigationItem key="navigationItem" id="0Aa-fO-uwo"/>
                     <connections>
+                        <outlet property="emailTextField" destination="9ZV-fI-OY4" id="z1O-nR-MRm"/>
                         <outlet property="mainView" destination="bJa-nw-MHf" id="Q6K-EC-lXp"/>
                         <outlet property="view" destination="bJa-nw-MHf" id="Mdm-lB-814"/>
                     </connections>
@@ -178,7 +180,7 @@ will be sent to it</string>
         <!--PhoneNumber-->
         <scene sceneID="VQG-Yi-4OX">
             <objects>
-                <viewController storyboardIdentifier="PhoneNumber" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l30-w4-jVq" userLabel="PhoneNumber" customClass="RegistrationController" customModule="Benly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhoneNumber" id="l30-w4-jVq" userLabel="PhoneNumber" customClass="RegisterController" customModule="Benly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fgr-2h-eeg" userLabel="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,7 +221,7 @@ so your friends can find you</string>
                                             <segue destination="jq6-dV-e6G" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="VVU-fh-32G"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0e-QM-V8n" userLabel="EnterButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0e-QM-V8n" userLabel="NextButton">
                                         <rect key="frame" x="207.66666666666666" y="167.33333333333331" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="0Ol-OT-cpP"/>
@@ -256,6 +258,7 @@ so your friends can find you</string>
                     </view>
                     <connections>
                         <outlet property="mainView" destination="Fgr-2h-eeg" id="ioo-9a-I07"/>
+                        <outlet property="phoneNumberTextField" destination="gZQ-zG-M6g" id="dJh-oD-hg8"/>
                         <outlet property="view" destination="Fgr-2h-eeg" id="drC-Il-i99"/>
                     </connections>
                 </viewController>
@@ -266,7 +269,7 @@ so your friends can find you</string>
         <!--Password-->
         <scene sceneID="Q2b-DW-NWW">
             <objects>
-                <viewController storyboardIdentifier="Password" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YO9-hy-y5Q" userLabel="Password" customClass="RegistrationController" customModule="Benly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Password" id="YO9-hy-y5Q" userLabel="Password" customClass="RegisterController" customModule="Benly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dFi-tj-9ge" userLabel="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -333,7 +336,7 @@ letter and one number)</string>
                                             <segue destination="l30-w4-jVq" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="4UQ-Nn-3dj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxE-4x-ktK" userLabel="EnterButton">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxE-4x-ktK" userLabel="RegisterButton">
                                         <rect key="frame" x="207.66666666666666" y="197.33333333333331" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="2a9-nr-yyb"/>
@@ -342,7 +345,7 @@ letter and one number)</string>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
                                         <connections>
-                                            <action selector="registerUserButton:" destination="YO9-hy-y5Q" eventType="touchUpInside" id="yaf-UH-kMu"/>
+                                            <action selector="registerButtonClick" destination="YO9-hy-y5Q" eventType="touchUpInside" id="y2j-kq-9Te"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -372,17 +375,19 @@ letter and one number)</string>
                     </view>
                     <connections>
                         <outlet property="mainView" destination="dFi-tj-9ge" id="2sT-Op-dZa"/>
+                        <outlet property="passwordTextField" destination="Oso-17-X50" id="jbQ-Bz-X4h"/>
+                        <outlet property="repeatPasswordTextField" destination="9Da-yZ-hmX" id="eaf-y3-sqG"/>
                         <outlet property="view" destination="dFi-tj-9ge" id="z6m-JP-acd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rme-hu-9Xz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314" y="-405"/>
+            <point key="canvasLocation" x="-315.38461538461536" y="-405.21327014218008"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="4UQ-Nn-3dj"/>
-        <segue reference="Ksl-tN-VOg"/>
+        <segue reference="Xv1-fW-cGF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
