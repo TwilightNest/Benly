@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		ED44D28C28DDE2AA0083EB22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		ED51214D2948543C009957E8 /* StoryboardSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoryboardSwitcher.swift; path = Benly/StoryboardSwitcher.swift; sourceTree = SOURCE_ROOT; };
+		ED51214D2948543C009957E8 /* StoryboardSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSwitcher.swift; sourceTree = "<group>"; };
 		ED51214F294861DF009957E8 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		ED7D8C5D28E71A2100C65157 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		ED7F4E5828D9BB8600E2EA36 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		EDC1591A28CA370C00C845E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDC1591D28CA370C00C845E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDC1591F28CA370C00C845E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDCCB7BC294F91AB00C4C161 /* HttpRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HttpRequester.swift; path = Benly/helpers/HttpRequester.swift; sourceTree = SOURCE_ROOT; };
+		EDCCB7BC294F91AB00C4C161 /* HttpRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequester.swift; sourceTree = "<group>"; };
 		EDFAB45029373F800009476A /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

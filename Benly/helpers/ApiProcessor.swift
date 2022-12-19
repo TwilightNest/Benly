@@ -4,7 +4,7 @@ class ApiProcessor {
     
     func registerNewUser(newUser: User) -> Int {
         
-        var responseCode = HttpRequester.sendSyncPostRequest(urlValue: baseUrl + usersUrl, jsonDictionary: newUser.getJsonDictionary())
+        let responseCode = HttpRequester.sendSyncPostRequest(urlValue: baseUrl + usersUrl, jsonDictionary: newUser.getJsonDictionary())
         
         return responseCode;
     }
