@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		ED1421EE28D8BE6400696138 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = ED1421ED28D8BE6400696138 /* MapboxMaps */; };
 		ED44D28D28DDE2AA0083EB22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED44D28C28DDE2AA0083EB22 /* User.swift */; };
-		ED51214E2948543C009957E8 /* StoryboardSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED51214D2948543C009957E8 /* StoryboardSwitcher.swift */; };
+		ED51214E2948543C009957E8 /* WorkspaceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED51214D2948543C009957E8 /* WorkspaceHelper.swift */; };
 		ED512150294861DF009957E8 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED51214F294861DF009957E8 /* AuthController.swift */; };
-		ED7D8C5E28E71A2100C65157 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED7D8C5D28E71A2100C65157 /* Register.storyboard */; };
-		ED7F4E5928D9BB8600E2EA36 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F4E5828D9BB8600E2EA36 /* RegisterController.swift */; };
+		ED58097529509EFE00A7723F /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58097429509EFE00A7723F /* RegisterController.swift */; };
+		ED6CD08C2950DB5B005442EB /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6CD08B2950DB5B005442EB /* AlertHelper.swift */; };
 		ED861591294FD82600A3D689 /* ApiProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED861590294FD82600A3D689 /* ApiProcessor.swift */; };
 		ED861596294FF65600A3D689 /* TextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED861595294FF65600A3D689 /* TextFieldExt.swift */; };
 		EDA425B228CB6FF700F05925 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA425B128CB6FF700F05925 /* MapKit.framework */; };
@@ -29,10 +29,10 @@
 
 /* Begin PBXFileReference section */
 		ED44D28C28DDE2AA0083EB22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		ED51214D2948543C009957E8 /* StoryboardSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSwitcher.swift; sourceTree = "<group>"; };
+		ED51214D2948543C009957E8 /* WorkspaceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceHelper.swift; sourceTree = "<group>"; };
 		ED51214F294861DF009957E8 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
-		ED7D8C5D28E71A2100C65157 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
-		ED7F4E5828D9BB8600E2EA36 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		ED58097429509EFE00A7723F /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		ED6CD08B2950DB5B005442EB /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		ED861590294FD82600A3D689 /* ApiProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProcessor.swift; sourceTree = "<group>"; };
 		ED861595294FF65600A3D689 /* TextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExt.swift; sourceTree = "<group>"; };
 		EDA425B128CB6FF700F05925 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -62,12 +62,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED5809732950971700A7723F /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				ED51214F294861DF009957E8 /* AuthController.swift */,
+				ED58097429509EFE00A7723F /* RegisterController.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		ED67E0BB2950948200E457DF /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EDC1591428CA370700C845E5 /* Main.storyboard */,
+				EDC1591C28CA370C00C845E5 /* LaunchScreen.storyboard */,
+				EDFAB45029373F800009476A /* Auth.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
 		ED68CD5A28D4A6F300BDEAB1 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
-				ED51214D2948543C009957E8 /* StoryboardSwitcher.swift */,
+				ED51214D2948543C009957E8 /* WorkspaceHelper.swift */,
 				EDCCB7BC294F91AB00C4C161 /* HttpRequester.swift */,
 				ED861590294FD82600A3D689 /* ApiProcessor.swift */,
+				ED6CD08B2950DB5B005442EB /* AlertHelper.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -99,9 +119,8 @@
 		EDA425B528CB75FC00F05925 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ED5809732950971700A7723F /* auth */,
 				EDA425B328CB75A000F05925 /* MapController.swift */,
-				ED7F4E5828D9BB8600E2EA36 /* RegisterController.swift */,
-				ED51214F294861DF009957E8 /* AuthController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -126,16 +145,13 @@
 		EDC1590D28CA370700C845E5 /* Benly */ = {
 			isa = PBXGroup;
 			children = (
+				ED67E0BB2950948200E457DF /* storyboards */,
 				ED861594294FF62800A3D689 /* extensions */,
 				ED7F4E5328D9B5B000E2EA36 /* models */,
 				ED68CD5A28D4A6F300BDEAB1 /* helpers */,
 				EDA425B528CB75FC00F05925 /* controllers */,
 				EDC1590E28CA370700C845E5 /* AppDelegate.swift */,
 				EDC1591028CA370700C845E5 /* SceneDelegate.swift */,
-				EDC1591428CA370700C845E5 /* Main.storyboard */,
-				EDC1591C28CA370C00C845E5 /* LaunchScreen.storyboard */,
-				ED7D8C5D28E71A2100C65157 /* Register.storyboard */,
-				EDFAB45029373F800009476A /* Auth.storyboard */,
 				EDC1591A28CA370C00C845E5 /* Assets.xcassets */,
 				EDC1591F28CA370C00C845E5 /* Info.plist */,
 				EDC1591728CA370700C845E5 /* Benly.xcdatamodeld */,
@@ -209,7 +225,6 @@
 			files = (
 				EDC1591E28CA370C00C845E5 /* LaunchScreen.storyboard in Resources */,
 				EDFAB45129373F800009476A /* Auth.storyboard in Resources */,
-				ED7D8C5E28E71A2100C65157 /* Register.storyboard in Resources */,
 				EDC1591B28CA370C00C845E5 /* Assets.xcassets in Resources */,
 				EDC1591628CA370700C845E5 /* Main.storyboard in Resources */,
 			);
@@ -222,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6CD08C2950DB5B005442EB /* AlertHelper.swift in Sources */,
 				EDA425B428CB75A000F05925 /* MapController.swift in Sources */,
 				EDC1591928CA370700C845E5 /* Benly.xcdatamodeld in Sources */,
 				ED861596294FF65600A3D689 /* TextFieldExt.swift in Sources */,
@@ -230,9 +246,9 @@
 				EDCCB7BD294F91AB00C4C161 /* HttpRequester.swift in Sources */,
 				EDC1591128CA370700C845E5 /* SceneDelegate.swift in Sources */,
 				ED512150294861DF009957E8 /* AuthController.swift in Sources */,
+				ED58097529509EFE00A7723F /* RegisterController.swift in Sources */,
 				ED861591294FD82600A3D689 /* ApiProcessor.swift in Sources */,
-				ED51214E2948543C009957E8 /* StoryboardSwitcher.swift in Sources */,
-				ED7F4E5928D9BB8600E2EA36 /* RegisterController.swift in Sources */,
+				ED51214E2948543C009957E8 /* WorkspaceHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

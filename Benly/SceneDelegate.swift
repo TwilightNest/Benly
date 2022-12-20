@@ -58,7 +58,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let currentUser = try! JSONDecoder().decode(User.self, from: data)
             currentUser.Login;
         } else { // если нет то идём на страницу авторизации
-            window?.rootViewController = StoryboardSwitcher.switchStoryboard(sbName: "Auth", controllerName: "Auth")
+            window?.rootViewController = WorkspaceHelper.switchStoryboard(sbName: "Auth", controllerName: "Auth")
         }
     }
     
