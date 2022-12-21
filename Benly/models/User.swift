@@ -29,10 +29,6 @@ class User : Codable {
         self.Password = Password
     }
     
-//    init(json: String) {
-//        
-//    }
-    
     init(json: [String: Any]) {
         self.Id = UUID(uuidString: (json["id"] as? String)!)!
         self.Login = (json["login"] as? String)!
@@ -50,4 +46,5 @@ class User : Codable {
         tmp.updateValue(Password, forKey: "Password")
         return tmp
     }
+    
 }

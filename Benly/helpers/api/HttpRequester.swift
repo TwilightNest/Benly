@@ -52,4 +52,32 @@ class HttpRequester {
         
         return (responseStatusCode, responseJsonDictionary)
     }
+    
+    static func sendSyncUpdateUserLocationRequest(urlValue: String, newUserLocation: UserLocation) -> Int {
+        
+        let url = URL(string: urlValue)!
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        guard let dataToPut = try? JSONEncoder().encode(newUserLocation) else {
+                    print("Error: Trying to convert model to JSON data")
+            return 0
+                }
+        request.httpBody = dataToPut
+        
+        var responseCode = 0;
+        let semaphore = DispatchSemaphore(value: 0)
+        
+        let task = URLSession.shared.dataTask(with: request) { (responseData, response, error) in
+            
+            responseCode = (response as? HTTPURLResponse)!.statusCode
+            semaphore.signal()
+        }
+        
+        task.resume()
+        semaphore.wait()
+        
+        return responseCode
+    }
 }

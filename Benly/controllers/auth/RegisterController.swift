@@ -21,10 +21,10 @@ class RegisterController: UIViewController {
             if ((200...299) ~= responseCode){
                 WorkspaceHelper.performSegue(parentController: self, segueIdentifier: "unwindToSignUpSegue")
             } else {
-                AlertHelper.showAlertMessage(parentController: self, title: "Error", message: "Response code = \(responseCode)")
+                AlertHelper.showAlertMessage(title: "Error", message: "Response code = \(responseCode)")
             }
         } else {
-            AlertHelper.showAlertMessage(parentController: self, title: "Validation error", message: "Passwords doesn't match")
+            AlertHelper.showAlertMessage(title: "Validation error", message: "Passwords doesn't match")
         }
     }
     

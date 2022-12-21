@@ -2,15 +2,16 @@ import UIKit
 import CoreLocation
 import MapboxMaps
 
-class MapController: UIViewController, LocationPermissionsDelegate {
+class MapController: UIViewController {
     
     @IBOutlet var mapView: MapView!
+    var locationManager = LocationManager()
+    var map = MapboxMapHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView.location.delegate = self
-        
-        mapView.location.options.puckType = .puck2D()
+        locationManager.setupLocationManager()
+        map.setupMapboxMapHelper(mapView: mapView)
     }
     
     override func viewDidAppear(_ animated: Bool) {

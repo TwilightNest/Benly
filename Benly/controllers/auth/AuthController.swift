@@ -8,26 +8,35 @@ class AuthController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     @IBAction func unwindToSignUp(segue: UIStoryboardSegue){
-        AlertHelper.showAlertMessage(parentController: self, title: "Good", message: "You successfully sign up")
+        AlertHelper.showAlertMessage(title: "Good", message: "You successfully sign up")
     }
     
     @IBAction func signInButtonClick() {
         if !loginTextField.text!.isEmpty || !passwordTextField.text!.isEmpty{
-            let responce = api.getUserByData(data: loginTextField.text!)
-            switch responce.0 {
+            let response = api.getUserByData(data: loginTextField.text!)
+            switch response.0 {
             case 200...299:
-                if passwordTextField.text! == responce.1?.Password{
+                if passwordTextField.text! == response.1?.Password{
+                    do {
+                        let data = try JSONEncoder().encode(response.1)
+                        UserDefaults.standard.set(data,forKey: "CurrentUser")
+                    }
+                    catch {
+                        print(error)
+                        return
+                    }
+                    
                     view.window?.rootViewController = WorkspaceHelper.switchStoryboard(sbName: "Main", controllerName: "Main")
                 } else {
-                    AlertHelper.showAlertMessage(parentController: self, title: "Error", message: "Wrong password")
+                    AlertHelper.showAlertMessage(title: "Error", message: "Wrong password")
                 }
             case 400...499:
-                AlertHelper.showAlertMessage(parentController: self, title: "Error", message: "User not found")
+                AlertHelper.showAlertMessage(title: "Error", message: "User not found")
             default:
-                AlertHelper.showAlertMessage(parentController: self, title: "Error", message: "WTF???")
+                AlertHelper.showAlertMessage(title: "Error", message: "WTF???")
             }
         } else {
-            AlertHelper.showAlertMessage(parentController: self, title: "Error", message: "Fill all fields")
+            AlertHelper.showAlertMessage(title: "Error", message: "Fill all fields")
         }
         
     }

@@ -1,6 +1,7 @@
 class ApiProcessor {
     let baseUrl: String = "http://185.152.139.127"
     let usersUrl: String = "/Users"
+    let usersLocationsUrl: String = "/UsersLocations"
     
     func registerNewUser(newUser: User) -> Int {
         
@@ -19,5 +20,10 @@ class ApiProcessor {
         default:
             return (0,User())
         }
+    }
+    
+    func updateUserLocation(newUserLocation: UserLocation) -> Int {
+        let responseCode = HttpRequester.sendSyncUpdateUserLocationRequest(urlValue: baseUrl + usersLocationsUrl, newUserLocation: newUserLocation)
+        return responseCode
     }
 }
